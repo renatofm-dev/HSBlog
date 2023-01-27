@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import LogoHsB from '../public/assets/logo-hsb192.png'
 
+
+
+
 function Header() {
   return (
     <header className="flex items-center justify-between space-x-2 font-bold px-10 py-5">

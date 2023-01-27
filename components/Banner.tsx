@@ -1,7 +1,15 @@
+//import { Inter } from "@next/font/google"
+
+
+// const inter = Inter ({
+//   subsets: ['latin'],
+//   weight: ['400', '700'],
+//   variable:'--font-inter'
+// })
 
 function Banner() {
   return (
-    <div className="flex flex-col lg:flex-row lg:space-x-5 justify-between font-bold px-10 py-5 mb-10">
+    <div className="flex flex-col lg:flex-row lg:space-x-5 justify-between font-bold px-10 py-5 mb-10 ">
       <div>
         <h1 className="text-7xl mb-2">Holding System Blog</h1>
         <h2 className="mt-5 ">
