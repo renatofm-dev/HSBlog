@@ -11,6 +11,7 @@
     "@portabletext/react": "^2.0.0",
     "@sanity/image-url": "^1.0.2",
     "@sanity/vision": "^3.0.0",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "@types/diff-match-patch": "^1.0.32",
     "dotenv": "^16.0.3",
     "next": "latest",
