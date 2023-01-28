@@ -6,7 +6,7 @@ type Base = {
     _updatedAt: string;
 }
 
-interface Post extends Bse {
+interface Post extends Base {
     author: Author;
     body: Block[];
     categories: Category[];
