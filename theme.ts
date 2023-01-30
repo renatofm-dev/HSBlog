@@ -23,7 +23,7 @@ export const myTheme = buildLegacyTheme({
 
   //Default Button
   '--default-button-color': '#666',
-  '--default-button-primary-color': props['--hsb-brand'],
+  '--default-button-primary-color': props['--my-yellow'],
   '--default-button-success-color': props['--my-green'],
   '--default-button-warning-color': props['--my-yellow'],
   '--default-button-danger-color': props['--my-red'],
@@ -38,7 +38,7 @@ export const myTheme = buildLegacyTheme({
   '--main-navigation-color': props['--my-black'],
   '--main-navigation-color--inverted': props['--my-white'],
 
-  '--focus-color': props['--hsb-brand'],
+  '--focus-color': props['--my-yellow'],
 
 
 })
