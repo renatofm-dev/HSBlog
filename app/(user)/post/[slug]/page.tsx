@@ -2,6 +2,8 @@ import { groq } from "next-sanity";
 import { client } from "../../../../lib/sanity.client";
 import Image from "next/image";
 import urlFor from "../../../../lib/urlFor";
+import { PortableText } from "@portabletext/react";
+import { RichTextComponents } from "../../../../components/RichTextComponents";
 
 type Props = {
   params: {
@@ -9,6 +11,21 @@ type Props = {
   }
 };
 
+export const revalidate = 60;
+
+export async function generateStaticParams() {
+  const query = groq`*[_type=='post']
+  {
+    slug
+  }`;
+
+  const slugs: Post[] = await client.fetch(query);
+  const slugRoutes = slugs.map((slug)=> slug.slug.current);
+
+  return slugRoutes.map((slug)=> ({
+    slug,
+  }));
+}
 
 async function Post({params:{slug}}: Props) {
   const query = groq`
@@ -26,7 +43,7 @@ async function Post({params:{slug}}: Props) {
   return <article className="px-10 pb-28 ">
     <section className="space-y-2 border border-[#f7ab0a] text-white">
       <div className="relative min-h-56 flex flex-col md:flex-row justify-between">
-        <div className="absolute top-0 w-full h-full opacity-10 blur-sm p-10">
+        <div className="absolute top-0 w-full h-full opacity-20 blur-sm p-10">
           <Image 
             className="object-cover object-center mx-auto"
             src={urlFor(post.mainImage).url()}
@@ -78,6 +95,8 @@ async function Post({params:{slug}}: Props) {
         </section>
       </div>
     </section>
+
+    <PortableText value={post.body} components={RichTextComponents}/>
   </article>
 }
 
