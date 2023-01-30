@@ -11,7 +11,7 @@ export const RichTextComponents = {
           <Image
             className="object-contain"
             src={urlFor(value).url()}
-            alt="Imagem do Post do Blog"
+            alt="Pessoas Felizes com sua Holding Familiar"
             fill
           />
         </div>
@@ -40,7 +40,7 @@ export const RichTextComponents = {
       <h4 className="text-2xl py-10 font-bold">{children}</h4>
     ),
 
-    bloquote: ({ children }: any) => (
+    blockquote: ({ children }: any) => (
       <blockquote className="border-l-[#F7AB0A] border-l-4 pl-5 py-5 my-5">
         {children}
       </blockquote>
@@ -48,7 +48,7 @@ export const RichTextComponents = {
   },
   marks: {
     link: ({ children, value }: any) => {
-      const rel = !value.href.startswith("/")
+      const rel = !value.href.startsWith("/")
         ? "noreferrer noopeer"
         : undefined;
 
