@@ -15,7 +15,7 @@ function Banner() {
         <h2 className="mt-5 ">
           Bem-vindo ao Principal Portal de informações sobre{" "}
           <span className="underline decoration-2 decoration-[#142D49]">
-          Holdings Patrimoniais 
+          Holding Familiar 
           </span>{" "}
             do Brasil.
         </h2>

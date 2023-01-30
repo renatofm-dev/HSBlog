@@ -41,9 +41,9 @@ async function Post({params:{slug}}: Props) {
 
 
   return <article className="px-10 pb-28 ">
-    <section className="space-y-2 border border-[#f7ab0a] text-white">
+    <section className="space-y-2 border border-[#FFB30D] text-white">
       <div className="relative min-h-56 flex flex-col md:flex-row justify-between">
-        <div className="absolute top-0 w-full h-full opacity-20 blur-sm p-10">
+        <div className="absolute top-0 w-full h-full opacity-10 blur-sm p-10">
           <Image 
             className="object-cover object-center mx-auto"
             src={urlFor(post.mainImage).url()}
@@ -52,12 +52,12 @@ async function Post({params:{slug}}: Props) {
           />
         </div>
 
-        <section className="p-5 bg-[#f7ab0a] w-full">
+        <section className="p-5 bg-[#FFB30D] w-full">
           <div className="flex flex-col md:flex-row justify-between gap-y-5">
             <div>
               <h1 className="text-4xl font-extrabold">{post.title}</h1>
-              <p>
-                {new Date(post._createdAt).toLocaleDateString("en-Us", {
+              <p className="text-[#142D49] font-semibold">
+                {new Date(post._createdAt).toLocaleDateString("pt-BR", {
                   day: "numeric",
                   month: "long",
                   year: "numeric",
@@ -69,8 +69,8 @@ async function Post({params:{slug}}: Props) {
                 className="rounded-full"
                 src={urlFor(post.author.image).url()}
                 alt={post.author.name}
-                height={40}
-                width={40}
+                height={50}
+                width={50}
               />
 
               <div className="w-64">
@@ -85,7 +85,7 @@ async function Post({params:{slug}}: Props) {
             <div className="flex items-center justify-end mt-auto space-x-2">{post.categories.map((category) => (
               <p 
                 key={category._id}
-                className="bg-gray-800 text-white px-3 py-1 rounded-full text-sm font-semibold mt-4"
+                className="bg-[#142D49] text-white px-3 py-1 rounded-full text-sm font-semibold mt-4"
               >
                 {category.title}
               </p>

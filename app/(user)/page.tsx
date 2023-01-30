@@ -39,7 +39,6 @@ export default async function HomePage() {
   return (
     <div>
       <BlogList posts={posts}/>
-      <h1>Not in Preview Mode</h1>
     </div>
   )
 }
