@@ -1,5 +1,6 @@
 
 import { Analytics } from '../../components/Analytics'
+//components
 import Banner from '../../components/Banner'
 import Header from '../../components/Header'
 import '../../styles/globals.css'

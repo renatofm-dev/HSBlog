@@ -1,5 +1,5 @@
 import Script from "next/script"
-
+//Component of GTAG
 export const Analytics = () => (
     <>
     <Script 
