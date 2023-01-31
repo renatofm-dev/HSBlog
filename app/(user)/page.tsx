@@ -39,6 +39,7 @@ export default async function HomePage() {
   return (
     <div>
       <BlogList posts={posts}/>
+      
     </div>
   )
 }
